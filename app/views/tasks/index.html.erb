@@ -15,9 +15,9 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.content %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細を確認する', task %></td>
+        <td><%= link_to '編集する', edit_task_path(task) %></td>
+        <td><%= link_to '削除する', task, method: :delete, data: { confirm: 'ツイートを削除しますか?' } %></td>
       </tr>
     <% end %>
   </tbody>
