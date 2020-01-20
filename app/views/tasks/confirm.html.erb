@@ -1,0 +1,8 @@
+<h3>これでツイートしますか？</h3>
+
+<%= form_with(model: @task, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+
+  <p>本文:<%= @task.content %></p>
+  <%= form.submit  "ツイートする" %>
+<% end %>
