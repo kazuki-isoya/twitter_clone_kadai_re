@@ -2,8 +2,9 @@
 
 <p>
   <strong>ツイート内容</strong>
+  <br>
   <%= @task.content %>
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'ツイートを編集する', edit_task_path(@task) %> |
+<%= link_to '戻る', tasks_path %>

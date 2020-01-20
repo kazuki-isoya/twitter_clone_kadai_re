@@ -43,6 +43,7 @@ class TasksController < ApplicationController
 
   def confirm
     @task = Task.new(task_params)
+    render :new if @task.invalid?
   end
 
   def destroy
