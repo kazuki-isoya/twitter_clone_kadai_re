@@ -17,17 +17,17 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-
-    respond_to do |format|
-      if @task.save
-        format.html { redirect_to @task, notice: 'ツイートを投稿できました！' }
-        format.json { render :show, status: :created, location: @task }
+      if params[:back]
+        render :new
       else
-        format.html { render :new }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
+        if @task.save
+          redirect_to tasks_path, notice: "ツイートしました！"
+        else
+          render 'new'
+        end
       end
     end
-  end
+
 
   def update
     respond_to do |format|
