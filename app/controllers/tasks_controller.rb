@@ -42,7 +42,7 @@ class TasksController < ApplicationController
   end
 
   def confirm
-
+    @task = Task.new(task_params)
   end
 
   def destroy
